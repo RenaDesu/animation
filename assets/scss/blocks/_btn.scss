@@ -1,0 +1,76 @@
+.btn {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+
+    width: rem(80px);
+    height: rem(80px);
+    padding: rem(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50%;
+
+    &--1 {
+        background-color: rgba(255, 255, 255, 0.3);
+        outline: rem(5px) solid #444444;
+        outline-offset: rem(-1px);
+        transition: background-color 0.3s ease, outline-color 0.5s ease;
+
+        &:hover {
+            background-color: #FFC700;
+        }
+
+        &:focus {
+            outline-color: #AF4FFF;
+        }
+    }
+
+    &--1:focus & {
+        &__icon--1 {
+            fill: $white;
+        }
+    }
+
+    &--2 {
+        background-color: $white;
+
+        outline: rem(4px) solid $white;
+        outline-offset: rem(-4px);
+        transition: outline-color 0.3s ease, outline-offset 0.3s ease;
+
+        &:hover,
+        &:focus {
+            outline-color: #444444;
+            outline-offset: rem(-10px);
+        }
+    }
+
+    &--3 {
+        background-color: transparent;
+        fill: $white;
+        outline: rem(4px) solid $white;
+        outline-offset: 0;
+        transition: box-shadow 0.3s ease, outline-offset 0.3s ease;
+
+        &:hover,
+        &:focus {
+            outline-offset: rem(-10px);
+            box-shadow: 0 0 0 rem(10px) rgba(255, 255, 255, 0.3);
+        }
+    }
+
+    &__link {
+        @include visually-hidden;
+    }
+
+    &__icon {
+        &--1 {
+            fill: #444444;
+            transition: fill 0.3s ease
+        }
+    }
+}

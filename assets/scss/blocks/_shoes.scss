@@ -1,0 +1,10 @@
+.shoes {
+    padding: rem(50px);
+    background-color: $black;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(30px);
+    }
+}

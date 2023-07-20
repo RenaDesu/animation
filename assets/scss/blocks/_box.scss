@@ -1,0 +1,10 @@
+.box {
+    padding: rem(30px) rem(10px);
+    background-color: #444444;
+    color: $black;
+    margin-bottom: rem(40px);
+  
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+  }

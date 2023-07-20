@@ -1,0 +1,111 @@
+.shoes-card {
+    position: relative;
+
+    width: rem(322px);
+    flex-shrink: 0;
+
+    padding: rem(24px) 0;
+    overflow: hidden;
+
+    background-color: #242524;
+    border-radius: rem(10px);
+
+    justify-self: center;
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transition: box-shadow 0.75s ease, background-color 0.75s ease;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: rem(274px);
+        margin-bottom: rem(20px);
+
+        &::before {
+            content: "";
+            position: absolute;
+
+            width: rem(192px);
+            height: rem(192px);
+
+            border-radius: 50%;
+        }
+
+        &--gold::before {
+            background-color: #ffd215;
+        }
+
+        &--red::before {
+            background-color: #fd0740;
+        }
+
+        &--green::before {
+            background-color: #68bf2c;
+        }
+
+        &-pic {
+            z-index: 1;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 rem(20px);
+    }
+
+    &__buy-btn {
+        padding: rem(8px) rem(24px);
+
+        font-weight: 500;
+        font-size: rem(24px);
+        line-height: 150%;
+        font-family: inherit;
+        color: #ffffff;
+
+        background-color: #0066ff;
+        border: none;
+        border-radius: rem(100px);
+        cursor: pointer;
+        transition: background-color 0.5s ease, box-shadow 0.3s ease 0.2s;
+
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 10px 0 #0066ff;
+            background-color: #02388a;
+        }
+    }
+
+
+    &--hover-1 {
+
+        &:hover {
+            background-color: #ffd215;
+            box-shadow: 5px 5px 0px #68bf2c;
+        }
+    }
+
+    &--hover-2 {
+        &:hover {
+            background-color: #68bf2c;
+            box-shadow: 5px 5px 0px #fd0740;
+        }
+    }
+
+    &--hover-3 {
+        &:hover {
+            background-color: #fd0740;
+            box-shadow: 5px 5px 0px #ffd215;
+        }
+    }
+}
