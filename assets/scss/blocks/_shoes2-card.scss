@@ -1,0 +1,128 @@
+.shoes2-card {
+    position: relative;
+
+    width: rem(322px);
+    flex-shrink: 0;
+    padding: rem(24px) 0;
+    overflow: hidden;
+
+    background-color: #242524;
+    border-radius: rem(10px);
+
+    justify-self: center;
+
+    &::before {
+        content: attr(data-brand);
+        position: absolute;
+        bottom: 22%;
+        left: 50%;
+        z-index: 1;
+
+        font-weight: 700;
+        font-size: rem(64px);
+        line-height: 100%;
+        text-align: center;
+        color: rgba(36, 37, 36, 0.5);
+        white-space: nowrap;
+
+        transform: translate(-50%, 0);
+
+        pointer-events: none;
+    }
+
+    &:hover & {
+        &__img {
+            &::before {
+                transform: scale(3.5);
+                transition: transform 0.6s ease;
+            }
+
+            &-pic {
+                transform: rotate(-25deg);
+                transition: transform 0.6s ease;
+            }
+        }
+
+        &__buy-btn {
+            background-color: #012e72;
+            transition: box-shadow 0.3s ease, background-color 0.2s ease 0.1s;
+        }
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: rem(274px);
+        margin-bottom: rem(20px);
+
+        &::before {
+            content: "";
+            position: absolute;
+
+            width: rem(182px);
+            height: rem(182px);
+
+            background-color: #68bf2c;
+            border-radius: 50%;
+
+            transition: transform 0.3s ease;
+        }
+
+        &-pic {
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+
+        &--gold {
+            &::before {
+                background-color: #ffd215;
+            }
+        }
+
+        &--red {
+            &::before {
+                background-color: #fd0740;
+            }
+        }
+
+        &--green {
+            &::before {
+                background-color: #68bf2c;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 rem(20px);
+    }
+
+    &__buy-btn {
+        padding: rem(8px) rem(24px);
+
+        font-weight: 500;
+        font-size: rem(24px);
+        line-height: 150%;
+        font-family: inherit;
+        color: $white;
+
+        background-color: #0066ff;
+        border: none;
+        border-radius: rem(100px);
+        cursor: pointer;
+
+        transition: box-shadow 0.3s ease, background-color 0.2s;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 0 rem(20px) 0 #0066ff;
+        }
+    }
+}
