@@ -1,0 +1,40 @@
+.header2 {
+    width: 100%;
+    min-height: 100%;
+    background-color: #0515AA;
+    padding: rem(30px) rem(40px);
+    overflow-x: hidden;
+
+    &__wrap {
+        max-width: rem(1300px);
+        margin: 0 auto;
+      
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+      
+      &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(40px);
+      }
+      
+      &__nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: rem(40px);
+      }
+
+      &__title {
+        font-weight: 400;
+        font-size: rem(32px);
+        line-height: 109.2%;
+        letter-spacing: 100%;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0;
+        margin-bottom: rem(15px);
+      }
+  }

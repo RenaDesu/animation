@@ -1,0 +1,41 @@
+.promo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        font-weight: bold;
+        font-size: rem(545px);
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+
+        margin: 0;
+        position: absolute;
+        z-index: 2;
+
+        animation: move-string 10s linear infinite;
+    }
+
+    &__box {
+        position: relative;
+        z-index: 5;
+    }
+
+    &__img {
+        max-width: 100%;
+        display: block;
+        animation: slide-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    &__badge {
+        position: absolute;
+        z-index: 10;
+        top: 10%;
+        left: 60%;
+        width: rem(179px);
+        height: rem(179px);
+        animation: rotate 5s linear infinite;
+    }
+}
